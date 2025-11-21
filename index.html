@@ -1073,40 +1073,6 @@
             .hero-metric-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; } /* Hide nav links on mobile for now */
             .nav-logo { margin: 0 auto; }
-            #hero {
-                padding-top: 140px;
-                text-align: center;
-            }
-            .hero-grid { gap: 2.5rem; }
-            .hero-left, .hero-right { text-align: center; }
-            .hero-flight { grid-template-columns: 1fr; }
-            .hero-tags { justify-content: center; }
-            .hero-pill { margin-left: auto; margin-right: auto; }
-            .hero-cta .btn { width: 100%; }
-            .hero-pane { padding: 2rem; }
-            .hero-right { width: 100%; }
-            #hero-canvas { opacity: 0.35; }
-        }
-
-        @media (max-width: 600px) {
-            body { font-size: 16px; }
-            .hero-flight-card { padding: 1rem; }
-            .hero-cta { width: 100%; }
-            .hero-pane { margin: 0 auto; }
-            .bento-grid { grid-auto-rows: 1fr; }
-            section { padding: 70px 0; }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-            .fade-target {
-                opacity: 1 !important;
-                transform: none !important;
-            }
         }
     </style>
 </head>
@@ -1699,11 +1665,6 @@
         function initFadeObserver() {
             const targets = document.querySelectorAll('.fade-target');
             if (!targets.length) return;
-
-            if (!('IntersectionObserver' in window)) {
-                targets.forEach(target => target.classList.add('is-visible'));
-                return;
-            }
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
