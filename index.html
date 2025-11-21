@@ -665,10 +665,15 @@
             background: linear-gradient(90deg, var(--bg-color), transparent 25%, transparent 75%, var(--bg-color));
         }
 
+        .marquee-wrapper {
+            transform: rotate(-3deg);
+            transform-origin: center;
+        }
+
         .marquee-track {
             display: flex;
             width: max-content;
-            animation: marquee-scroll 26s linear infinite;
+            animation: marquee-scroll 34s linear infinite;
             gap: clamp(1.5rem, 4vw, 3rem);
             will-change: transform;
         }
@@ -682,7 +687,7 @@
             align-items: center;
             gap: clamp(1.5rem, 4vw, 3rem);
             min-width: 100%;
-            flex-shrink: 0;
+            flex: 0 0 auto;
         }
 
         .marquee-text {
@@ -1238,22 +1243,24 @@
     <!-- ABOUT SECTION (Marquee) -->
     <section id="about" class="fade-target" style="padding: 0; overflow: hidden;">
         <div class="marquee-container">
-            <div class="marquee-track">
-                <div class="marquee-segment">
-                    <span class="marquee-text tone-outline">SCALE WITHOUT CEILING</span>
-                    <span class="marquee-text tone-cyan">MAXIMALIST STRATEGY</span>
-                    <span class="marquee-text tone-outline">ENTERPRISE GRADE</span>
-                    <span class="marquee-text tone-magenta">DIGITAL ASCENT</span>
-                    <span class="marquee-text tone-outline">PAID MEDIA MASTERY</span>
-                    <span class="marquee-text tone-gold">FULL-FUNNEL GROWTH</span>
-                </div>
-                <div class="marquee-segment" aria-hidden="true">
-                    <span class="marquee-text tone-outline">SCALE WITHOUT CEILING</span>
-                    <span class="marquee-text tone-cyan">MAXIMALIST STRATEGY</span>
-                    <span class="marquee-text tone-outline">ENTERPRISE GRADE</span>
-                    <span class="marquee-text tone-magenta">DIGITAL ASCENT</span>
-                    <span class="marquee-text tone-outline">PAID MEDIA MASTERY</span>
-                    <span class="marquee-text tone-gold">FULL-FUNNEL GROWTH</span>
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <div class="marquee-segment">
+                        <span class="marquee-text tone-outline">SCALE WITHOUT CEILING</span>
+                        <span class="marquee-text tone-cyan">MAXIMALIST STRATEGY</span>
+                        <span class="marquee-text tone-outline">ENTERPRISE GRADE</span>
+                        <span class="marquee-text tone-magenta">DIGITAL ASCENT</span>
+                        <span class="marquee-text tone-outline">PAID MEDIA MASTERY</span>
+                        <span class="marquee-text tone-gold">FULL-FUNNEL GROWTH</span>
+                    </div>
+                    <div class="marquee-segment" aria-hidden="true">
+                        <span class="marquee-text tone-outline">SCALE WITHOUT CEILING</span>
+                        <span class="marquee-text tone-cyan">MAXIMALIST STRATEGY</span>
+                        <span class="marquee-text tone-outline">ENTERPRISE GRADE</span>
+                        <span class="marquee-text tone-magenta">DIGITAL ASCENT</span>
+                        <span class="marquee-text tone-outline">PAID MEDIA MASTERY</span>
+                        <span class="marquee-text tone-gold">FULL-FUNNEL GROWTH</span>
+                    </div>
                 </div>
             </div>
         </div>
